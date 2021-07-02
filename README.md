@@ -48,8 +48,8 @@ automaticamente inicializada com o valor undefined (caso não seja atribuído
 nenhum outro valor)
 Exemplo:
 
-var company = 'Hcode Treinamentos';
-console.log('Minha empresa se chama ' + company);
+                var company = 'Hcode Treinamentos';
+                console.log('Minha empresa se chama ' + company);
 
 Let: Onde a variável declarada com let leva em conta, não onde foi criada, mas sim
 o bloco de código de sua origem. Isso significa que se a declararmos dentro de um
@@ -57,14 +57,14 @@ if(), switch() ou for(), ela será “enxergada” apenas dentro desta parte do 
 dentro deste escopo específico.
 
 
-            function returnCar() {
-            let car = 'Land Rover';
-            if (car === 'Land Rover') {
-            let car = 'Ferrari';
-            console.log('Dentro do if: ' + car);
-            }
-            console.log('Fora do if: ' + car);
-            }
+                function returnCar() {
+                    let car = 'Land Rover';
+                    if (car === 'Land Rover') {
+                        let car = 'Ferrari';
+                        console.log('Dentro do if: ' + car);
+                    }
+                    console.log('Fora do if: ' + car);
+                }
 
 Const: Funciona exatamente como um let, porém, sua grande diferença é que esta é
 uma constante, ou seja, em momento algum pode ser alterar o valor desta const
@@ -78,20 +78,19 @@ considerar como sendo um array ou um objeto.
 O destructuring pode ser usado tanto para declarar variáveis quanto para
 atribuir valores a variáveis.
 
+                const resposta = {
+                    usuario: 'Claudiney,
+                    canal: 'whatsapp',
+                    felicidade: 80.34,
+                    tristeza: 1.43,
+                    euforia: 60.32,
+                };
+                const { usuario, felicidade, tristeza, euforia } = resposta;
+                console.log('Olá, meu nome é ' + usuario);
 
-            const resposta = {
-            usuario: 'Claudiney,
-            canal: 'whatsapp',
-            felicidade: 80.34,
-            tristeza: 1.43,
-            euforia: 60.32,
-            };
-            const { usuario, felicidade, tristeza, euforia } = resposta;
-            console.log('Olá, meu nome é ' + usuario);
-
-            console.log('A probabilidade de felicidade no texto é de: ' + felicidade);
-            console.log('A probabilidade de tristeza no texto é de: ' + tristeza);
-            console.log('A probabilidade de euforia no texto é de: ' + euforia);
+                console.log('A probabilidade de felicidade no texto é de: ' + felicidade);
+                console.log('A probabilidade de tristeza no texto é de: ' + tristeza);
+                console.log('A probabilidade de euforia no texto é de: ' + euforia);
 
 
 ## 5. O que é o DOM?
